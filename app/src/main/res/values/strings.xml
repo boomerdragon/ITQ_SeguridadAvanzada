@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ITQ - Seguridad Avanzada</string>
+    <string name="fmt_usuario">Usuario: %1$s</string>
+    <string name="fmt_token">Token Cifrado: %1$s</string>
+    <string name="fmt_algoritmo">Algoritmo: %1$s</string>
+    <string name="testComm">PROBAR COMUNICACIÓN HTTPS CON TLS PINNING</string>
+    <string name="cryptoStart">Inicializando sistema criptográfico...</string>
+    <string name="cryptoStatus">🔒 ESTADO DE CIFRADO Y TLS PINNING</string>
+    <string name="title_advanced_mobile_security">🔐 ADVANCED MOBILE SECURITY</string>
+    <string name="aes_256_gcm">AES-256 GCM</string>
+    <string name="token_cifrado">Token Cifrado: ...</string>
+    <string name="usuario_cifrado">Usuario: Cifrado...</string>
+    <string name="servicio_alias">SERVICIO_ALIAS</string>
+</resources>

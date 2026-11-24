@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Configuración estricta de seguridad en red para el dominio backend -->
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">jsonplaceholder.typicode.com</domain>
+
+        <!-- Fijación de Clave Pública (Public Key Pinning / SHA-256 Base64 Hashes) -->
+        <pin-set expiration="2027-12-31">
+            <!-- Hash SHA-256 Base64 real del servidor -->
+            <pin digest="SHA-256">kuj8niDJZ7L/FhVll1wOJFjX6v0tfSGasazraQ0i1a0=</pin>
+            <!--pin digest="SHA-256">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</pin-->
+            <!-- Hash de respaldo (Backup Pin) -->
+            <pin digest="SHA-256">WJG6Vacsln05Vyy6ULfkcZyA8InTgOXgMpBuQO9o8O8=</pin>
+            <!--pin digest="SHA-256">BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB=</pin-->
+        </pin-set>
+    </domain-config>
+</network-security-config>

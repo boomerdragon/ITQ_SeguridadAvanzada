@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#001A33">
+
+    <!-- Encabezado Arcade HUD TecNM -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_advanced_mobile_security"
+        android:textColor="#FF6600"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Tarjeta de Estado de Seguridad -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp"
+        app:cardBackgroundColor="#002244"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cryptoStatus"
+                android:textColor="#00E5FF"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tvEstadoSeguridad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cryptoStart"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+
+            <ProgressBar
+                android:id="@+id/pbCargandoSeguridad"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:visibility="gone"
+                android:layout_marginTop="6dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Botón de Conexión HTTPS Segura -->
+    <Button
+        android:id="@+id/btnProbarHttps"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="@string/testComm"
+        android:backgroundTint="#FF6600"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:cornerRadius="8dp"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Lista RecyclerView de Credenciales Cifradas -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCredencialesSeguras"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>
